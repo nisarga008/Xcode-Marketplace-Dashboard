@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light dark; }
+
+/* Smooth focus ring */
+.focus-ring:focus { outline: none; box-shadow: 0 0 0 3px rgba(30,134,255,0.35); }
+
+/* Table scroll */
+.table-wrap { overflow: auto; }
