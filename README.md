@@ -7,7 +7,7 @@ A single-page Products module built with **Next.js (App Router) + TypeScript + T
 
 ### 1. Clone the repository
 
-git clone - https://github.com/nisarga008/NextJs_Project008
+git clone - https://github.com/nisarga008/Xcode-Marketplace-Dashboard
 cd products-dashboard
 
 
