@@ -19,7 +19,7 @@ yarn install
 
 ### 3.Environment Variables
 PORT=3000
-VERCEL_URL=<your-vercel-url>
+VERCEL_URL=xcode-marketplace-dashboard-xxb8k6oaa-nisargapandeys-projects.vercel.app
 
 ## 4.Quick Start 
 npm install
