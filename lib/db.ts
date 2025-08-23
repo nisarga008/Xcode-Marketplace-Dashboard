@@ -1,10 +1,17 @@
-import { faker } from '@faker-js/faker';
-import { Product } from './types';
+import { faker } from "@faker-js/faker";
+import { Product } from "./types";
 
 function seed(n = 60): Product[] {
   faker.seed(42);
-  const categories = ['Electronics', 'Clothing', 'Home', 'Beauty', 'Sports', 'Grocery'];
-  const statuses: Array<Product['status']> = ['active', 'out-of-stock'];
+  const categories = [
+    "Electronics",
+    "Clothing",
+    "Home",
+    "Beauty",
+    "Sports",
+    "Grocery",
+  ];
+  const statuses: Array<Product["status"]> = ["active", "out-of-stock"];
   return Array.from({ length: n }).map(() => ({
     id: crypto.randomUUID(),
     name: faker.commerce.productName(),
@@ -17,7 +24,6 @@ function seed(n = 60): Product[] {
     createdAt: faker.date.recent({ days: 45 }).toISOString(),
   }));
 }
-
 
 class DB {
   items: Product[];

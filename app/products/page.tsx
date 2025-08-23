@@ -1,8 +1,8 @@
-import ProductsClient from './components/ProductsClient';
-import { getBaseUrl } from '@/lib/utils';
-import { PaginatedProducts } from '@/lib/types';
+import ProductsClient from "./components/ProductsClient";
+import { getBaseUrl } from "@/lib/utils";
+import { PaginatedProducts } from "@/lib/types";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default async function ProductsPage({
   searchParams,
@@ -12,13 +12,12 @@ export default async function ProductsPage({
   try {
     const url = new URL(`${getBaseUrl()}/api/products`);
     const params = new URLSearchParams(searchParams as Record<string, string>);
-    if (!params.has('page')) params.set('page', '1');
-    if (!params.has('limit')) params.set('limit', '10');
+    if (!params.has("page")) params.set("page", "1");
+    if (!params.has("limit")) params.set("limit", "10");
     url.search = params.toString();
 
     const res = await fetch(url.toString(), { next: { revalidate: 0 } });
 
-    // Read the response body only once
     const text = await res.text();
 
     if (!res.ok) {
@@ -29,7 +28,7 @@ export default async function ProductsPage({
 
     return <ProductsClient initialData={data} />;
   } catch (error) {
-    console.error('Error fetching products:', error);
+    console.error("Error fetching products:", error);
     return <div className="text-red-500">Failed to load products.</div>;
   }
 }
