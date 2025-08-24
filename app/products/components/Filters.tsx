@@ -23,6 +23,9 @@ export default function Filters({
   const [limit, setLimit] = useState(Number(sp.get("limit") ?? 10));
   const debounceRef = useRef<NodeJS.Timeout | null>(null);
 
+
+  // Builds query parameters based on current filter values and updates the URL
+
   const onApply = () => {
     const params = new URLSearchParams(Array.from(sp.entries()));
     if (category) params.set("category", category);
@@ -38,6 +41,9 @@ export default function Filters({
   };
 
   useEffect(() => {
+
+    // Debounce search input: apply filters after 400ms of no typing
+
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(onApply, 400);
     return () => {

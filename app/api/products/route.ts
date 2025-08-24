@@ -15,6 +15,7 @@ export async function GET(req: NextRequest) {
     const sortOrder = url.searchParams.get("sortOrder") ?? "desc";
 
     let items = [...db.items];
+   // Apply filters: category, status, and search keyword
 
     if (category)
       items = items.filter((i) => i.category.toLowerCase() === category);
@@ -63,6 +64,8 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
+  // Validate request body using Joi schema
+
   const { error, value } = productSchema.validate(body, { abortEarly: false });
 
   if (error) {

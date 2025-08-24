@@ -1,3 +1,5 @@
+// Pagination component: handles page navigation with Previous/Next buttons
+
 "use client";
 
 export default function Pagination({
@@ -10,7 +12,9 @@ export default function Pagination({
   onPage: (page: number) => void;
 }) {
   if (pages <= 1) return null;
+   // Navigate to previous page, ensuring it doesn't go below 1
   const prev = () => onPage(Math.max(1, page - 1));
+  // Navigate to next page, ensuring it doesn't exceed total pages
   const next = () => onPage(Math.min(pages, page + 1));
   return (
     <div className="flex items-center justify-center gap-2">
