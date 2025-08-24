@@ -2,6 +2,11 @@
 
 A single-page Products module built with **Next.js (App Router) + TypeScript + Tailwind** and **Next API routes**. Implements pagination, sorting, filtering, debounced search, details drawer, loading/empty/error states, and in-memory mock data using Faker.
 
+## Tech Stack
+Next.js
+Typescript
+Tailwind Css
+etc.
 
 ## Setup & Installation
 
@@ -128,6 +133,35 @@ GET /api/products?page=1&limit=5&category=Electronics&sortBy=price&sortOrder=asc
 
 
 
+
+## Time Spent
+
+Approximately 4 hours — a solid, efficient timeframe to ideate, implement, debug, and polish the UI and core functionalities.
+
+## Challenges Faced
+
+Pagination Logic: Handling queries like limit and page and updating the data display accordingly.
+
+Filter Integration: Applying combined filters (category, status, search term) while preserving pagination state.
+
+UI State Management: Synchronizing filter inputs, table data, and navigation without conflicts.
+
+Dynamic Data Exposure: Ensuring real-time clarity of “Total: 60” products and the “Visible Products by Category” heading 
+Xcode Marketplace Dashboard.
+
+Possibly addressing API calls and asynchronous data fetching with loading/error handling.
+
+## Bonus Features Added
+
+Combined Filters + Search: Filtering by category and status, plus search—a unified control panel for user-friendly interactions.
+
+Responsive Table Layout: Clean display of product attributes including prices, stock levels, categories, and vendor details.
+
+Pagination Controls: "Prev Page" and "Next" links with page number indicator (e.g., "Page 1 of 6") 
+Xcode Marketplace Dashboard.
+
+Status Tags & Data Totals: Visual cues via status flags ("Active", "Out of Stock") plus total count display.
+
 ## ChatGPT / AI assistance was used to:
 
 1.Generate structured README content.
@@ -137,8 +171,3 @@ GET /api/products?page=1&limit=5&category=Electronics&sortBy=price&sortOrder=asc
 3.Solve hydration and data formatting issues.
 
 4.AI helped improve development speed, reduce debugging time, and provide best practices for SSR + client components.
-
-
-
-
-
