@@ -136,7 +136,7 @@ GET /api/products?page=1&limit=5&category=Electronics&sortBy=price&sortOrder=asc
 
 ## Time Spent
 
-Approximately 4 hours — a solid, efficient timeframe to ideate, implement, debug, and polish the UI and core functionalities.
+Approximately 6 hours — a solid, efficient timeframe to ideate, implement, debug, and polish the UI and core functionalities.
 
 ## Challenges Faced
 
